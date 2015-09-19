@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;MongoDBJDBC.java&apos; to &apos;hackathonBatch/src/com.hackthon.samurai.util&apos;&#x0D;&#x0A;- Original project: &apos;mongo&apos;&#x0D;&#x0A;- Destination element: &apos;hackathonBatch/src/com.hackthon.samurai.util&apos;&#x0D;&#x0A;- Original element: &apos;com.vijay.mongodb.MongoDBJDBC.java&apos;" description="Copy compilation unit" destination="=hackathonBatch/src&lt;com.hackthon.samurai.util" element1="/src\/main\/java&lt;com.vijay.mongodb{MongoDBJDBC.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1442659526083" units="1" version="1.0"/>
+</session>

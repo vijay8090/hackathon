@@ -1,0 +1,26 @@
+2015-09-19 17:18:44 DEBUG CsvLoaderBatchManagerThread:74 - start checkStopJobMonitor
+2015-09-19 17:18:44 DEBUG CsvLoaderBatchManagerThread:84 - end checkStopJobMonitor
+2015-09-19 17:18:44 DEBUG CsvLoaderBatchManagerThread:89 - start startCsvParser
+2015-09-19 17:18:44 DEBUG CsvLoaderBatchManagerThread:149 - start getCsvFiles
+2015-09-19 17:18:44 DEBUG CsvLoaderBatchManagerThread:158 - end getCsvFiles
+2015-09-19 17:18:44 DEBUG CsvLoaderBatchManagerThread:102 - Total file count 1
+2015-09-19 17:18:44 DEBUG CsvLoaderBatchManagerThread:170 - start sortFilesLatestFirst
+2015-09-19 17:18:44 DEBUG CsvLoaderBatchManagerThread:173 - Before Sorting :
+2015-09-19 17:18:44 DEBUG CsvLoaderBatchManagerThread:175 - Name : input3.csv modified date : Sat Sep 19 17:18:22 IST 2015
+2015-09-19 17:18:44 DEBUG CsvLoaderBatchManagerThread:182 - After Sorting :
+2015-09-19 17:18:44 DEBUG CsvLoaderBatchManagerThread:184 - Name : input3.csv modified date : Sat Sep 19 17:18:22 IST 2015
+2015-09-19 17:18:44 DEBUG CsvLoaderBatchManagerThread:186 - end sortFilesLatestFirst
+2015-09-19 17:18:44 DEBUG CSVFileUtil:98 - New file location: C:\samurai\csvConv\working\\input3.csv
+2015-09-19 17:18:44 DEBUG CsvLoaderBatchManagerThread:199 - start processCsvFile
+2015-09-19 17:18:45 DEBUG CSVFileUtil:98 - New file location: C:\samurai\csvConv\success\\input3.csv
+2015-09-19 17:18:45 DEBUG CsvLoaderBatchManagerThread:264 - end processCsvFile
+2015-09-19 17:18:45 DEBUG CsvLoaderBatchManagerThread:137 - end startCsvParser
+2015-09-19 17:18:45 DEBUG CsvLoaderBatchManagerThread:305 - Pausing the executing for 60 Secs 
+2015-09-19 17:19:45 DEBUG CsvLoaderBatchManagerThread:74 - start checkStopJobMonitor
+2015-09-19 17:19:45 DEBUG CsvLoaderBatchManagerThread:84 - end checkStopJobMonitor
+2015-09-19 17:19:45 DEBUG CsvLoaderBatchManagerThread:89 - start startCsvParser
+2015-09-19 17:19:45 DEBUG CsvLoaderBatchManagerThread:149 - start getCsvFiles
+2015-09-19 17:19:45 DEBUG CsvLoaderBatchManagerThread:158 - end getCsvFiles
+2015-09-19 17:19:45 DEBUG CsvLoaderBatchManagerThread:134 - No files to process
+2015-09-19 17:19:45 DEBUG CsvLoaderBatchManagerThread:137 - end startCsvParser
+2015-09-19 17:19:45 DEBUG CsvLoaderBatchManagerThread:305 - Pausing the executing for 60 Secs 

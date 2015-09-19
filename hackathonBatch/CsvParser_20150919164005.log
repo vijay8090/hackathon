@@ -1,0 +1,32 @@
+2015-09-19 16:40:06 DEBUG CsvLoaderBatchManagerThread:72 - start checkStopJobMonitor
+2015-09-19 16:40:06 DEBUG CsvLoaderBatchManagerThread:82 - end checkStopJobMonitor
+2015-09-19 16:40:06 DEBUG CsvLoaderBatchManagerThread:87 - start startCsvParser
+2015-09-19 16:40:06 DEBUG CsvLoaderBatchManagerThread:147 - start getCsvFiles
+2015-09-19 16:40:06 DEBUG CsvLoaderBatchManagerThread:156 - end getCsvFiles
+2015-09-19 16:40:06 DEBUG CsvLoaderBatchManagerThread:100 - Total file count 2
+2015-09-19 16:40:06 DEBUG CsvLoaderBatchManagerThread:168 - start sortFilesLatestFirst
+2015-09-19 16:40:06 DEBUG CsvLoaderBatchManagerThread:171 - Before Sorting :
+2015-09-19 16:40:06 DEBUG CsvLoaderBatchManagerThread:173 - Name : input1.csv modified date : Sat Sep 19 15:42:51 IST 2015
+2015-09-19 16:40:06 DEBUG CsvLoaderBatchManagerThread:173 - Name : input2.csv modified date : Sat Sep 19 15:43:03 IST 2015
+2015-09-19 16:40:06 DEBUG CsvLoaderBatchManagerThread:180 - After Sorting :
+2015-09-19 16:40:06 DEBUG CsvLoaderBatchManagerThread:182 - Name : input1.csv modified date : Sat Sep 19 15:42:51 IST 2015
+2015-09-19 16:40:06 DEBUG CsvLoaderBatchManagerThread:182 - Name : input2.csv modified date : Sat Sep 19 15:43:03 IST 2015
+2015-09-19 16:40:06 DEBUG CsvLoaderBatchManagerThread:184 - end sortFilesLatestFirst
+2015-09-19 16:40:06 DEBUG CSVFileUtil:98 - New file location: C:\samurai\csvConv\working\\input1.csv
+2015-09-19 16:40:06 DEBUG CsvLoaderBatchManagerThread:197 - start processCsvFile
+2015-09-19 16:40:07 ERROR CsvLoaderBatchManagerThread:118 - com.mongodb.DuplicateKeyException: Write failed with error code 11000 and error message 'E11000 duplicate key error collection: samurai.ITEM_ATTR index: _id_ dup key: { : "13579" }'
+2015-09-19 16:40:07 ERROR CsvLoaderBatchManagerThread:120 - Exception in input1.csvfile Write failed with error code 11000 and error message 'E11000 duplicate key error collection: samurai.ITEM_ATTR index: _id_ dup key: { : "13579" }'
+2015-09-19 16:40:07 DEBUG CSVFileUtil:98 - New file location: C:\samurai\csvConv\working\\input2.csv
+2015-09-19 16:40:07 DEBUG CsvLoaderBatchManagerThread:197 - start processCsvFile
+2015-09-19 16:40:07 ERROR CsvLoaderBatchManagerThread:118 - com.mongodb.DuplicateKeyException: Write failed with error code 11000 and error message 'E11000 duplicate key error collection: samurai.ITEM_ATTR index: _id_ dup key: { : "13579" }'
+2015-09-19 16:40:07 ERROR CsvLoaderBatchManagerThread:120 - Exception in input2.csvfile Write failed with error code 11000 and error message 'E11000 duplicate key error collection: samurai.ITEM_ATTR index: _id_ dup key: { : "13579" }'
+2015-09-19 16:40:07 DEBUG CsvLoaderBatchManagerThread:135 - end startCsvParser
+2015-09-19 16:40:07 DEBUG CsvLoaderBatchManagerThread:269 - Pausing the executing for 60 Secs 
+2015-09-19 16:41:07 DEBUG CsvLoaderBatchManagerThread:72 - start checkStopJobMonitor
+2015-09-19 16:41:07 DEBUG CsvLoaderBatchManagerThread:82 - end checkStopJobMonitor
+2015-09-19 16:41:07 DEBUG CsvLoaderBatchManagerThread:87 - start startCsvParser
+2015-09-19 16:41:07 DEBUG CsvLoaderBatchManagerThread:147 - start getCsvFiles
+2015-09-19 16:41:07 DEBUG CsvLoaderBatchManagerThread:156 - end getCsvFiles
+2015-09-19 16:41:07 DEBUG CsvLoaderBatchManagerThread:132 - No files to process
+2015-09-19 16:41:07 DEBUG CsvLoaderBatchManagerThread:135 - end startCsvParser
+2015-09-19 16:41:07 DEBUG CsvLoaderBatchManagerThread:269 - Pausing the executing for 60 Secs 

@@ -1,0 +1,109 @@
+package com.vijay.mongodb;
+
+import java.util.Date;
+import java.util.List;
+import java.util.Set;
+
+import com.mongodb.BasicDBObject;
+import com.mongodb.DB;
+import com.mongodb.DBCollection;
+import com.mongodb.DBCursor;
+import com.mongodb.MongoClient;
+
+public class MongoCollectionUtil {
+	
+	static MongoClient mongo = null;
+	static  DB db = null;
+	static{
+		 mongo = MongodbConnectionUtil.getConnection();
+		  db = mongo.getDB("samurai");
+	}
+	
+	public static void  displayAllCollection(){
+		
+		//MongoClient mongo = MongodbConnectionUtil.getConnection();
+		
+		
+		List<String> dbs = mongo.getDatabaseNames();
+		for(String dbname : dbs){
+			System.out.println("DB Name : "+dbname);
+			DB db = mongo.getDB(dbname);
+			//DBCollection table = db.getCollection("user");
+			
+			Set<String> tables = db.getCollectionNames();
+			 
+			for(String coll : tables){
+				System.out.println("DB :"+dbname+" , collection : "+coll);
+			}
+		}
+	}
+	
+	public static void  saveExample(){
+		
+		//MongoClient mongo = MongodbConnectionUtil.getConnection();
+		DB db = mongo.getDB("local");
+		// creates collection if not exists
+		DBCollection table = db.getCollection("user");
+		BasicDBObject document = new BasicDBObject();
+		document.put("name", "vijay");
+		document.put("age", 30);
+		document.put("createdDate", new Date());
+		table.insert(document);
+		System.out.println("created");
+		
+	}
+	
+
+	public static void  updateExample(){
+		
+		DBCollection table = db.getCollection("user");
+		 
+		BasicDBObject query = new BasicDBObject();
+		query.put("name", "vijay");
+	 
+		BasicDBObject newDocument = new BasicDBObject();
+		newDocument.put("age", "vijay-updated");
+	 
+		BasicDBObject updateObj = new BasicDBObject();
+		updateObj.put("$set", newDocument);
+	 
+		table.update(query, updateObj);
+		System.out.println("updated");
+	}
+	
+	public static void  findExample(){
+		
+		DBCollection table = db.getCollection("user");
+		 
+		BasicDBObject searchQuery = new BasicDBObject();
+		searchQuery.put("name", "vijay");
+	 
+		DBCursor cursor = table.find(searchQuery);
+	 
+		while (cursor.hasNext()) {
+			System.out.println(cursor.next());
+		}
+		
+	}
+	
+	public static void  deleteExample(){
+		DBCollection table = db.getCollection("user");
+		 
+		BasicDBObject searchQuery = new BasicDBObject();
+		searchQuery.put("name", "vijay");
+	 
+		table.remove(searchQuery);
+		System.out.println("deleted");
+	}
+
+	public static void main(String[] args) {
+
+		displayAllCollection();
+		saveExample();
+		updateExample();
+		findExample();
+		//deleteExample();
+		//System.out.println("updated");
+	}
+
+}

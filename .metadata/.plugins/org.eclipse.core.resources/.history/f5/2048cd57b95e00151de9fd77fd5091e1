@@ -1,0 +1,252 @@
+package com.vijay.mongodb;
+
+/*
+ * Copyright (c) 2014 ObjectLabs Corporation
+ * Distributed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Written with mongo-2.11.2.jar
+ * Documentation: http://api.mongodb.org/java/
+ * A Java class connecting to a MongoDB database given a MongoDB Connection URI.
+ */
+
+import java.net.UnknownHostException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.mongodb.BasicDBObject;
+import com.mongodb.DB;
+import com.mongodb.DBCollection;
+import com.mongodb.DBCursor;
+import com.mongodb.DBObject;
+import com.mongodb.MongoClient;
+
+
+public class JavaSimpleExample {
+	
+	static int limit = 100000;
+
+    // Extra helper code
+
+    public static BasicDBObject[] createSeedData(){
+    	
+    	int limit = 100000;
+    	
+    	  final BasicDBObject[] seedData = new BasicDBObject[limit] ;
+    	  BasicDBObject seventies = null;
+    	for(int i = 0;i<limit;i++){        
+         seventies = new BasicDBObject();
+        seventies.put("_id", i);
+        seventies.put("value", "first"+i);
+       /* seventies.put("artist", "Debby Boone");
+        seventies.put("song", "You Light Up My Life");
+        seventies.put("weeksAtOne", 10);*/
+        seedData[i]=seventies;
+    	}
+                  
+        
+        return seedData;
+    }
+    
+ public static BasicDBObject[] updateSeedData(){
+    	
+    	int limit = 100;
+    	
+    	  final BasicDBObject[] seedData = new BasicDBObject[limit] ;
+    	  BasicDBObject seventies = null;
+    	for(int i = 0;i<limit;i++){        
+         seventies = new BasicDBObject();
+        seventies.put("_id", i);
+        seventies.put("value", "second"+i);
+       /* seventies.put("artist", "Debby Boone");
+        seventies.put("song", "You Light Up My Life");
+        seventies.put("weeksAtOne", 10);*/
+        seedData[i]=seventies;
+    	}
+                  
+        
+        return seedData;
+    }
+ 
+ public static BasicDBObject[] thirdSeedData(){
+ 	
+ 	int limit = 100000;
+ 	
+ 	  final BasicDBObject[] seedData = new BasicDBObject[limit] ;
+ 	  BasicDBObject seventies = null;
+ 	for(int i = 0;i<limit;i++){        
+      seventies = new BasicDBObject();
+     seventies.put("_id", i);
+     seventies.put("value", "third"+i);
+    /* seventies.put("artist", "Debby Boone");
+     seventies.put("song", "You Light Up My Life");
+     seventies.put("weeksAtOne", 10);*/
+     seedData[i]=seventies;
+ 	}
+               
+     
+     return seedData;
+ }
+ 
+ 
+ public static BasicDBObject[] createSeedData(String name){
+ 	
+ 	
+ 	  final BasicDBObject[] seedData = new BasicDBObject[limit] ;
+ 	  BasicDBObject seventies = null;
+ 	for(int i = 0;i<limit;i++){        
+      seventies = new BasicDBObject();
+     seventies.put("_id", i);
+     seventies.put("value", name+"-"+i);
+    /* seventies.put("artist", "Debby Boone");
+     seventies.put("song", "You Light Up My Life");
+     seventies.put("weeksAtOne", 10);*/
+     seedData[i]=seventies;
+ 	}
+               
+     
+     return seedData;
+ }
+    
+    public static void main(String[] args) throws UnknownHostException{
+        
+        // Create seed data
+        
+       // final BasicDBObject[] seedData = createSeedData();
+        
+        // Standard URI format: mongodb://[dbuser:dbpassword@]host:port/dbname
+       
+      //  MongoClientURI uri  = new MongoClientURI("mongodb://user:pass@host:port/db"); 
+        
+       // MongoClient client = new MongoClient(uri);
+       // DB db = client.getDB(uri.getDatabase());
+        
+        MongoClient client = MongodbConnectionUtil.getConnection();
+        DB db = client.getDB("local");
+        
+        
+        
+        int colCount = 50;
+        
+        List<DBCollection> dbCollectionList = new ArrayList<DBCollection>();
+        List<DBCursor> dbCursorList = new ArrayList<DBCursor>();
+        
+        for(int i=0;i<colCount;i++){
+        	
+        	DBCollection channelDbCol = db.getCollection("channel"+i);
+        	channelDbCol.drop();
+        	BasicDBObject[] seedData = createSeedData("channel"+i);
+        	channelDbCol.insert(seedData);
+             System.out.println("completed-"+i);
+             dbCollectionList.add(channelDbCol);
+        }
+        
+        for(int i=0;i<colCount;i++){
+        	
+        	DBCursor cursor = dbCollectionList.get(i).find();
+        	dbCursorList.add(cursor);
+        }
+        
+       //
+        	DBCursor cursor = dbCursorList.get(0);
+        while (cursor.hasNext()) {
+        	 DBObject doc = cursor.next();
+ 			System.out.print(doc.get("value")+",");
+        	 for(int i=0;i<colCount;i++){
+        		 BasicDBObject searchQuery = new BasicDBObject();
+        			searchQuery.put("_id", doc.get("_id"));
+       	      doc = dbCollectionList.get(i).find(searchQuery).next();
+       	 
+			System.out.print(doc.get("value")+",");
+			//System.out.print(doc2.get("value")+",");
+			//System.out.print(doc3.get("value")+",");
+			
+        	 }
+        	 System.out.println();
+		}
+     //   
+        /*
+         * First we'll add a few songs. Nothing is required to create the
+         * songs collection; it is created automatically when we insert.
+         */
+        
+  /*      DBCollection firstchannel = db.getCollection("firstchannel");
+        firstchannel.drop();
+        
+        firstchannel.insert(seedData);
+        System.out.println("completed1");
+        
+        final BasicDBObject[] useedData = updateSeedData();
+        
+        DBCollection secondchannel = db.getCollection("secondchannel");
+        secondchannel.drop();
+        
+        secondchannel.insert(useedData);
+        
+        
+        System.out.println("completed2");
+        
+        final BasicDBObject[] thirdData = thirdSeedData();
+        
+        DBCollection thirdchannel = db.getCollection("thirdchannel");
+        thirdchannel.drop();
+        
+        thirdchannel.insert(thirdData);
+        
+        System.out.println("completed3");*/
+        
+       /* 
+        DBCursor cursor1 = firstchannel.find();
+        DBCursor cursor2 = secondchannel.find();
+        DBCursor cursor3 = thirdchannel.find();
+        while (cursor1.hasNext()) {
+        	 DBObject doc = cursor1.next();
+        	 DBObject doc2 = cursor2.next();
+        	 DBObject doc3 = cursor3.next();
+			System.out.print(doc.get("value")+",");
+			System.out.print(doc2.get("value")+",");
+			System.out.print(doc3.get("value")+",");
+			System.out.println();
+		}
+        */
+       
+/*        
+         * Then we need to give Boyz II Men credit for their contribution to
+         * the hit "One Sweet Day".
+         
+
+        BasicDBObject updateQuery = new BasicDBObject("song", "One Sweet Day");
+        songs.update(updateQuery, new BasicDBObject("$set", new BasicDBObject("artist", "Mariah Carey ft. Boyz II Men")));
+       
+        
+        
+        
+        
+         * Finally we run a query which returns all the hits that spent 10 
+         * or more weeks at number 1.
+         
+      
+        BasicDBObject findQuery = new BasicDBObject("weeksAtOne", new BasicDBObject("$gte",10));
+        BasicDBObject orderBy = new BasicDBObject("decade", 1);
+
+        DBCursor docs = songs.find(findQuery).sort(orderBy);
+
+        while(docs.hasNext()){
+            DBObject doc = docs.next();
+            System.out.println(doc);
+            
+            System.out.println(
+                "In the " + doc.get("decade") + ", " + doc.get("song") + 
+                " by " + doc.get("artist") + " topped the charts for " + 
+                doc.get("weeksAtOne") + " straight weeks."
+            );
+        }*/
+        
+        // Since this is an example, we'll clean up after ourselves.
+
+       // songs.drop();
+        
+        // Only close the connection when your app is terminating
+
+        client.close();
+    }
+}

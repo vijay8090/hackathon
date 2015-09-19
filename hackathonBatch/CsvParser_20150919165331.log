@@ -1,0 +1,17 @@
+2015-09-19 16:53:31 DEBUG CsvLoaderBatchManagerThread:74 - start checkStopJobMonitor
+2015-09-19 16:53:31 DEBUG CsvLoaderBatchManagerThread:84 - end checkStopJobMonitor
+2015-09-19 16:53:31 DEBUG CsvLoaderBatchManagerThread:89 - start startCsvParser
+2015-09-19 16:53:31 DEBUG CsvLoaderBatchManagerThread:149 - start getCsvFiles
+2015-09-19 16:53:31 DEBUG CsvLoaderBatchManagerThread:158 - end getCsvFiles
+2015-09-19 16:53:31 DEBUG CsvLoaderBatchManagerThread:102 - Total file count 2
+2015-09-19 16:53:31 DEBUG CsvLoaderBatchManagerThread:170 - start sortFilesLatestFirst
+2015-09-19 16:53:31 DEBUG CsvLoaderBatchManagerThread:173 - Before Sorting :
+2015-09-19 16:53:31 DEBUG CsvLoaderBatchManagerThread:175 - Name : input1.csv modified date : Sat Sep 19 15:42:51 IST 2015
+2015-09-19 16:53:31 DEBUG CsvLoaderBatchManagerThread:175 - Name : input2.csv modified date : Sat Sep 19 15:43:03 IST 2015
+2015-09-19 16:53:31 DEBUG CsvLoaderBatchManagerThread:182 - After Sorting :
+2015-09-19 16:53:31 DEBUG CsvLoaderBatchManagerThread:184 - Name : input1.csv modified date : Sat Sep 19 15:42:51 IST 2015
+2015-09-19 16:53:31 DEBUG CsvLoaderBatchManagerThread:184 - Name : input2.csv modified date : Sat Sep 19 15:43:03 IST 2015
+2015-09-19 16:53:31 DEBUG CsvLoaderBatchManagerThread:186 - end sortFilesLatestFirst
+2015-09-19 16:53:31 DEBUG CSVFileUtil:98 - New file location: C:\samurai\csvConv\working\\input1.csv
+2015-09-19 16:53:31 DEBUG CsvLoaderBatchManagerThread:199 - start processCsvFile
+2015-09-19 16:53:40 ERROR CsvLoaderBatchManagerThread:120 - java.lang.IllegalArgumentException: invalid hexadecimal representation of an ObjectId: [13579]

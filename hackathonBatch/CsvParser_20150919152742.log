@@ -1,0 +1,14 @@
+2015-09-19 15:27:42 DEBUG CsvLoaderBatchManagerThread:61 - start checkStopJobMonitor
+2015-09-19 15:27:42 DEBUG CsvLoaderBatchManagerThread:71 - end checkStopJobMonitor
+2015-09-19 15:27:42 DEBUG CsvLoaderBatchManagerThread:76 - start startCsvParser
+2015-09-19 15:27:42 DEBUG CsvLoaderBatchManagerThread:139 - start getCsvFiles
+2015-09-19 15:27:42 DEBUG CsvLoaderBatchManagerThread:148 - end getCsvFiles
+2015-09-19 15:27:42 DEBUG CsvLoaderBatchManagerThread:121 - No files to process
+2015-09-19 15:27:42 DEBUG CsvLoaderBatchManagerThread:124 - end startJobMonitor
+2015-09-19 15:27:42 DEBUG CsvLoaderBatchManagerThread:221 - Pausing the executing for 60 Secs 
+2015-09-19 15:28:42 DEBUG CsvLoaderBatchManagerThread:61 - start checkStopJobMonitor
+2015-09-19 15:28:42 DEBUG CsvLoaderBatchManagerThread:71 - end checkStopJobMonitor
+2015-09-19 15:28:42 DEBUG CsvLoaderBatchManagerThread:76 - start startCsvParser
+2015-09-19 15:28:42 DEBUG CsvLoaderBatchManagerThread:139 - start getCsvFiles
+2015-09-19 15:28:42 DEBUG CsvLoaderBatchManagerThread:148 - end getCsvFiles
+2015-09-19 15:28:42 DEBUG CsvLoaderBatchManagerThread:89 - Total file count 4
