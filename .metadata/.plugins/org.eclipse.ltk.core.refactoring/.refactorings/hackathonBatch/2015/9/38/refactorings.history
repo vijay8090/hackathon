@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 5 elements from project &apos;hackathonBatch&apos;&#x0D;&#x0A;- Original project: &apos;hackathonBatch&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     CsvParser_20150919144228.log&#x0D;&#x0A;     CsvParser_20150919144310.log&#x0D;&#x0A;     CsvParser_20150919144403.log&#x0D;&#x0A;     CsvParser_20150919144615.log&#x0D;&#x0A;     CsvParser_20150919144804.log" description="Delete elements" element1="CsvParser_20150919144228.log" element2="CsvParser_20150919144310.log" element3="CsvParser_20150919144403.log" element4="CsvParser_20150919144615.log" element5="CsvParser_20150919144804.log" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="5" stamp="1442656363241" subPackages="false" version="1.0"/>
+</session>

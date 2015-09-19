@@ -1,0 +1,36 @@
+2015-09-19 14:48:04 DEBUG CsvLoaderBatchManagerThread:61 - start checkStopJobMonitor
+2015-09-19 14:48:04 DEBUG CsvLoaderBatchManagerThread:71 - end checkStopJobMonitor
+2015-09-19 14:48:04 DEBUG CsvLoaderBatchManagerThread:76 - start startCsvParser
+2015-09-19 14:48:04 DEBUG CsvLoaderBatchManagerThread:139 - start getCsvFiles
+2015-09-19 14:48:04 DEBUG CsvLoaderBatchManagerThread:148 - end getCsvFiles
+2015-09-19 14:48:04 DEBUG CsvLoaderBatchManagerThread:89 - Total file count 4
+2015-09-19 14:48:04 DEBUG CsvLoaderBatchManagerThread:160 - start sortFilesLatestFirst
+2015-09-19 14:48:04 DEBUG CsvLoaderBatchManagerThread:163 - Before Sorting :
+2015-09-19 14:48:04 DEBUG CsvLoaderBatchManagerThread:165 - Name : input1.csv modified date : Sat Sep 19 14:34:33 IST 2015
+2015-09-19 14:48:04 DEBUG CsvLoaderBatchManagerThread:165 - Name : input2.csv modified date : Sat Sep 19 14:34:33 IST 2015
+2015-09-19 14:48:04 DEBUG CsvLoaderBatchManagerThread:165 - Name : input3.csv modified date : Sat Sep 19 14:34:33 IST 2015
+2015-09-19 14:48:04 DEBUG CsvLoaderBatchManagerThread:165 - Name : input4.csv modified date : Sat Sep 19 14:34:33 IST 2015
+2015-09-19 14:48:04 DEBUG CsvLoaderBatchManagerThread:174 - After Sorting :
+2015-09-19 14:48:04 DEBUG CsvLoaderBatchManagerThread:176 - Name : input1.csv modified date : Sat Sep 19 14:34:33 IST 2015
+2015-09-19 14:48:04 DEBUG CsvLoaderBatchManagerThread:176 - Name : input2.csv modified date : Sat Sep 19 14:34:33 IST 2015
+2015-09-19 14:48:04 DEBUG CsvLoaderBatchManagerThread:176 - Name : input3.csv modified date : Sat Sep 19 14:34:33 IST 2015
+2015-09-19 14:48:04 DEBUG CsvLoaderBatchManagerThread:176 - Name : input4.csv modified date : Sat Sep 19 14:34:33 IST 2015
+2015-09-19 14:48:04 DEBUG CsvLoaderBatchManagerThread:179 - end sortFilesLatestFirst
+2015-09-19 14:48:04 DEBUG CSVFileUtil:98 - New file location: C:\samurai\csvConv\working\\input1.csv
+2015-09-19 14:48:04 DEBUG CsvLoaderBatchManagerThread:192 - start processCsvFile
+2015-09-19 14:48:04 DEBUG CSVFileUtil:98 - New file location: C:\samurai\csvConv\success\\input1.csv
+2015-09-19 14:48:04 DEBUG CsvLoaderBatchManagerThread:196 - end processCsvFile
+2015-09-19 14:48:04 DEBUG CSVFileUtil:98 - New file location: C:\samurai\csvConv\working\\input2.csv
+2015-09-19 14:48:04 DEBUG CsvLoaderBatchManagerThread:192 - start processCsvFile
+2015-09-19 14:48:04 DEBUG CSVFileUtil:98 - New file location: C:\samurai\csvConv\success\\input2.csv
+2015-09-19 14:48:04 DEBUG CsvLoaderBatchManagerThread:196 - end processCsvFile
+2015-09-19 14:48:04 DEBUG CSVFileUtil:98 - New file location: C:\samurai\csvConv\working\\input3.csv
+2015-09-19 14:48:04 DEBUG CsvLoaderBatchManagerThread:192 - start processCsvFile
+2015-09-19 14:48:04 DEBUG CSVFileUtil:98 - New file location: C:\samurai\csvConv\success\\input3.csv
+2015-09-19 14:48:04 DEBUG CsvLoaderBatchManagerThread:196 - end processCsvFile
+2015-09-19 14:48:04 DEBUG CSVFileUtil:98 - New file location: C:\samurai\csvConv\working\\input4.csv
+2015-09-19 14:48:04 DEBUG CsvLoaderBatchManagerThread:192 - start processCsvFile
+2015-09-19 14:48:04 DEBUG CSVFileUtil:98 - New file location: C:\samurai\csvConv\success\\input4.csv
+2015-09-19 14:48:04 DEBUG CsvLoaderBatchManagerThread:196 - end processCsvFile
+2015-09-19 14:48:04 DEBUG CsvLoaderBatchManagerThread:124 - end startJobMonitor
+2015-09-19 14:48:04 DEBUG CsvLoaderBatchManagerThread:221 - Pausing the executing for 60 Secs 
